@@ -1,5 +1,9 @@
 # Ollama model shim niccolox/sky-t1-flash-cline
 
+## Background
+
+UC Berkeley Skylab researchers released an open source LLM trained for under 500$, thats my kind of model! https://novasky-ai.github.io/posts/sky-t1/
+
 ## Intent
 
 Ollama uses a Modelfile, similar to a Dockerfile or good old Make. 
@@ -83,6 +87,12 @@ You can find your model at:
 
 
 ```
+
+## Ollama model
+
+Ollama Model can be now found at https://ollama.com/niccolox/sky-t1-flash-cline
+
+NOTE: its a 20B model, so its too slow for my workflow. Sad. 
 
 
 Model 
