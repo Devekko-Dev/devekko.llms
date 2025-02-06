@@ -1,4 +1,6 @@
-README.md
+# Ollama model shim niccolox/sky-t1-flash-cline
+
+## Intent
 
 Ollama uses a Modelfile, similar to a Dockerfile or good old Make. 
 
@@ -7,6 +9,8 @@ I use Ollama workflow, I have NVIDIA Docker running CUDA GPU enabled containers 
 There was no Sky-T1-Flash model on Ollama so I begged, borrowed and stole prior art (is it stealing if its open source? perhaps not).
 
 Sourcing Sky-T1 model from Huggingface via a Github support question from the project lead at UC Berkeley https://github.com/ollama/ollama/issues/8768
+
+## Prior Art
 
 cross checked the Modelfile from the Huggingface source. 
 
@@ -17,6 +21,8 @@ I wanted to customize the model, and I have heard good things about Cline regard
 So I viewed the Modelfile for Sky-T1-Preview-Cline, thank you rashakol, I couldn't find you online, but Thanks! 
 
 ```ollama show --modelfile rashakol/sky-t1-32B-preview-cline:latest```
+
+## Create Shim Model
 
 I manually merged the two Modelfiles, using this ```hf.co/bartowski/Sky-T1-32B-Flash-G``` core Ollama sections and just copied the entire preloaded prompt from ```rashakol```
 
@@ -33,7 +39,7 @@ success
 ```
 
 
-Show model
+## Show model
 
 ```
 ollama show niccolox/sky-t1-flash-cline
@@ -58,7 +64,7 @@ ollama show niccolox/sky-t1-flash-cline
 ```
 
 
-then push to ollama
+## then push to ollama
 
 ```
  ollama push niccolox/sky-t1-flash-cline
@@ -79,6 +85,9 @@ You can find your model at:
 ```
 
 
+Model 
+https://novasky-ai.github.io/posts/reduce-overthinking/
+https://github.com/ollama/ollama/issues/8768
 
 Docs
 https://github.com/ollama/ollama/blob/main/README.md
@@ -86,5 +95,7 @@ https://github.com/ollama/ollama/blob/main/docs/modelfile.md
 
 
 Inspiration
-
 https://otmaneboughaba.com/posts/local-llm-ollama-huggingface/
+
+Blog post
+https://www.niccolox.com/p/355-making-an-ollama-model-with-sky-t1-cline
